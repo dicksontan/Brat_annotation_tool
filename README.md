@@ -2,7 +2,7 @@
 - [Prologue](#prologue)
 - [Datasets](#Datasets)
 - [Requirements/Packages](#Requirements-Packages)
-- [Docker Set-up](#Docker Set-up)
+- [Docker Set-up](#Docker-Set-up)
 - [Conclusion and Recommendations](#Conclusion-and-Recommendations)
 - [Sources](#Sources)
 
@@ -30,7 +30,7 @@ I have highlighted the more important packages in the requirements.txt file. Not
 
 ### Docker Set-up
 
-Reference: https://github.com/cassj/brat-docker![image](https://user-images.githubusercontent.com/50508538/187128975-c774562f-21dc-44dc-b7a8-92c11956e7f3.png)
+Reference: [image](https://user-images.githubusercontent.com/50508538/187128975-c774562f-21dc-44dc-b7a8-92c11956e7f3.png)
 
 
 
