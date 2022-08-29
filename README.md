@@ -9,19 +9,16 @@
 ---
 
 ### Prologue
-The problem that I would like to tackle in this project is: 
 
-* What are the features of a property that sellers should look out for in order to sell their houses at a higher price in Ames?
-
-Conversely, this will also be useful for buyers who might be looking to resell their house.
-
-We will be creating a linear predictive model using using Linear, Lasso, Ridge or ElasticNet regression to investigate and identify the features which have a strong positive or negative relationship with housing sale prices.
+This is a guide on how to set-up the brat annotation tool through docker and do Named-Entity Recognition Labelling.
 
 ---
 
 ### Datasets
 
-The dataset used for this project is based off the greater region of Ames, Iowa. It is collected from 2006 to 2010 by the Ames Assessor's Office. 
+The clinical notes dataset used for this project is based off data scraped from mt samples.
+
+https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions
 
 ---
 
