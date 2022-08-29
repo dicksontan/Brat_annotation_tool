@@ -40,7 +40,7 @@ docker volume create --name brat-cfg
 Mapping port 81 on your local to brat
 
 ```
-command: docker run --platform linux/amd64 -it --privileged --pid=host --name=brat5 -d -p 81:80 -v brat-data:/bratdata -v brat-cfg:/bratcfg -e BRAT_USERNAME=brat -e BRAT_PASSWORD=brat -e BRAT_EMAIL=brat@example.com cassj/brat![image](https://user-images.githubusercontent.com/50508538/187129622-b4c262ad-cf3e-4907-b4b8-4abf6ad8281c.png)
+docker run --platform linux/amd64 -it --privileged --pid=host --name=brat1 -d -p 81:80 -v brat-data:/bratdata -v brat-cfg:/bratcfg -e BRAT_USERNAME=brat -e BRAT_PASSWORD=brat -e BRAT_EMAIL=brat@example.com cassj/brat
 
 ```
 
