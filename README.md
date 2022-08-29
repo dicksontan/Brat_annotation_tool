@@ -37,12 +37,24 @@ docker volume create --name brat-data
 docker volume create --name brat-cfg
 ```
 
-Mapping port 81 on your local to brat
+Mapping port 81 on your local to brat:
 
 ```
 docker run --platform linux/amd64 -it --privileged --pid=host --name=brat1 -d -p 81:80 -v brat-data:/bratdata -v brat-cfg:/bratcfg -e BRAT_USERNAME=brat -e BRAT_PASSWORD=brat -e BRAT_EMAIL=brat@example.com cassj/brat
 
 ```
+### Testing file transfer
+
+To get image id:
+
+```
+docker ps
+```
+
+Create a folder called brat_annotations and touch a.txt in the folder. Assuming your container id is c5a09d229264, run the following to transfer files in:
+
+```
+docker cp ./desktop/brat_annotations c5a09d229264:bratdata/examples ```
 
 
 ---
