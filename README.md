@@ -3,7 +3,7 @@
 - [Datasets](#Datasets)
 - [Requirements/Packages](#Requirements-Packages)
 - [Docker Set-up](#Docker-Set-up)
-- [Testing file transfer and creating input folder] (#Testing-file-transfer-and-creating-input-folder)
+- [Testing file transfer and creating input folder](#Testing-file-transfer-and-creating-input-folder)
 - [Conclusion and Recommendations](#Conclusion-and-Recommendations)
 
 ---
