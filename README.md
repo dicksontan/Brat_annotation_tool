@@ -1,7 +1,7 @@
 ### Contents:
 - [Prologue](#prologue)
 - [Datasets](#Datasets)
-- [Requirements/Packages](#Requirements/Packages)
+- [Requirements/Packages](#Requirements-Packages)
 - [Summary of Analysis](#Summary-of-Analysis)
 - [Conclusion and Recommendations](#Conclusion-and-Recommendations)
 - [Sources](#Sources)
@@ -22,7 +22,7 @@ The clinical notes dataset used for this project is based off data scraped from 
 
 ---
 
-### Requirements/Packages
+### Requirements-Packages
 
 I have highlighted the more important packages in the requirements.txt file. Notably, you will have to use python 3.6 if you want to run spacey.
 
