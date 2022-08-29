@@ -82,7 +82,7 @@ In brat_run.py, change the required inputs 1-4 according to your local context u
 
 Also, change the python file path in brat_shell.sh if required.
 
-Then, everytime you want to run the script, enter this into terminal:
+Then, everytime you want to run the script, enter this into terminal (make sure you are using environment that has python 3.6):
 
 ```
 ./desktop/brat_shell.sh
