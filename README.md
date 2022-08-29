@@ -32,6 +32,8 @@ I have highlighted the more important packages in the requirements.txt file. Not
 
 Reference: [cassj/brat](https://user-images.githubusercontent.com/50508538/187128975-c774562f-21dc-44dc-b7a8-92c11956e7f3.png)
 
+In terminal, input the following commands:
+
 ```
 docker volume create --name brat-data
 docker volume create --name brat-cfg
@@ -41,7 +43,6 @@ Mapping port 81 on your local to brat:
 
 ```
 docker run --platform linux/amd64 -it --privileged --pid=host --name=brat1 -d -p 81:80 -v brat-data:/bratdata -v brat-cfg:/bratcfg -e BRAT_USERNAME=brat -e BRAT_PASSWORD=brat -e BRAT_EMAIL=brat@example.com cassj/brat
-
 ```
 ### Testing file transfer
 
@@ -54,10 +55,25 @@ docker ps
 Create a folder called brat_annotations and touch a.txt in the folder. Assuming your container id is c5a09d229264, run the following to transfer files in:
 
 ```
-docker cp ./desktop/brat_annotations c5a09d229264:bratdata/examples 
-
+docker cp ./desktop/brat_annotations/a.txt c5a09d229264:bratdata/examples 
 ```
 
+Open a new terminal and access container bash through:
+
+```
+docker exec -it brat1 /bin/bash
+cd bratdata
+cd examples
+ls
+```
+
+Confirm that you are able to see a.txt in examples folder. At this point in time, you should be able to open the UI of brat through docker and view the examples folder to see if a.txt resides in it.
+
+Then remove the file:
+
+```
+rm a.txt
+```
 
 ---
 
