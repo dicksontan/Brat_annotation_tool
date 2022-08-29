@@ -30,9 +30,12 @@ I have highlighted the more important packages in the requirements.txt file. Not
 
 ### Docker Set-up
 
-Reference: [image](https://user-images.githubusercontent.com/50508538/187128975-c774562f-21dc-44dc-b7a8-92c11956e7f3.png)
+Reference: [cassj/brat](https://user-images.githubusercontent.com/50508538/187128975-c774562f-21dc-44dc-b7a8-92c11956e7f3.png)
 
-
+```
+command: docker volume create --name brat-data
+command: docker volume create --name brat-cfg
+```
 
 
 ---
