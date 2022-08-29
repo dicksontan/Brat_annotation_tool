@@ -71,11 +71,9 @@ Confirm that you are able to see mt_samples folder in examples folder. At this p
 
 ```
 chmod +wrx [filename]
-
 ```
 Next, download the brat_shell.sh file and put it in your desktop. Create a brat_annotations folder on your desktop.
 
-```
 Then, everytime you want to run the script, enter this into terminal:
 
 ```
