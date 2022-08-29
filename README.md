@@ -78,7 +78,7 @@ Create a brat_annotations folder on your desktop.
 
 Download the python files brat_run.py and brat_clean.py
 
-In brat_run.py, enter the required inputs 1-4 under if __name__ == "__main__".
+In brat_run.py, change the required inputs 1-4 according to your local context under: if __name__ == "__main__".
 
 Also, change the python file path in brat_shell.sh if required.
 
