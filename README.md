@@ -1,5 +1,5 @@
 ### Contents:
-- [Problem Statement](#Problem-Statement)
+- [prologue](#Problem-Statement)
 - [Datasets](#Datasets)
 - [Data Dictionary](#Data-Dictionary)
 - [Summary of Analysis](#Summary-of-Analysis)
@@ -8,7 +8,7 @@
 
 ---
 
-### Problem Statement
+### Prologue
 The problem that I would like to tackle in this project is: 
 
 * What are the features of a property that sellers should look out for in order to sell their houses at a higher price in Ames?
