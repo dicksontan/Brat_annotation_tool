@@ -2,18 +2,15 @@
 - [Prologue](#prologue)
 - [Datasets](#Datasets)
 - [Requirements/Packages](#Requirements-Packages)
-- [Summary of Analysis](#Summary-of-Analysis)
+- [Docker Set-up](#Docker Set-up)
 - [Conclusion and Recommendations](#Conclusion-and-Recommendations)
 - [Sources](#Sources)
-
-```
-abc```
 
 ---
 
 ### Prologue
 
-This is a guide on how to set-up the brat annotation tool through docker and do Named-Entity Recognition Labelling.
+This is a guide on how to set-up the brat annotation tool through docker and do Named-Entity Recognition Labelling. Do note documententation is based on MacOS.
 
 ---
 
@@ -31,35 +28,12 @@ I have highlighted the more important packages in the requirements.txt file. Not
 
 ---
 
-### Summary of Analysis
+### Docker Set-up
 
-The liner model most suitable for this project is the Ridge Model.
+Reference: https://github.com/cassj/brat-docker![image](https://user-images.githubusercontent.com/50508538/187128975-c774562f-21dc-44dc-b7a8-92c11956e7f3.png)
 
-The following features were identified as having a relationship with sale price:
 
-|Feature|Relationship|
-|---|---|
-|overall_qual|+|
-|ground living area| + |
-|exterior quality| + |
-|Kitchen Quality| + |
-|Total Basement sq ft|+|
-|Garage Area| + |
-|1st Floor sq ft| + |
-|Basement Quality| + |
-|Garage Finish|+|
-|Fireplace Quality| + |
-|Full Bath| + |
-|Total Rooms Above Grade| + |
-|Foundation Material|+|
-|Overall Condition| + |
-|Neighborhood| + |
-|2nd Floor sq ft| + |
-|Age Since Remod| - |
-|Age Sold| - |
-|Basement Unfished sq ft| - |
 
-From observing the features that have been identified as crucial in predicting house prices, we can see that area, quality, the type of neighborhood, condition and age all have a relationship with house prices. 
 
 ---
 
