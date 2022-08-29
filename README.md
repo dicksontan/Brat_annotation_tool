@@ -18,7 +18,8 @@ This is a guide on how to set-up the brat annotation tool through docker and do 
 
 The clinical notes dataset used for this project is based off data scraped from mt samples.
 
-[Dataset Link] https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions
+
+[dataset link]    https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions
 
 ---
 
