@@ -90,7 +90,7 @@ Then, everytime you want to run the script, enter this into terminal:
 
 Go back into your browser UI and view the annotations.
 
-In the UI, go options, login with user: brat, pass: brat to make changes to annotations.
+In the brat braowser UI, login with user: brat, pass: brat, to make changes to annotations.
 
 ---
 
