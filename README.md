@@ -24,7 +24,7 @@ The clinical notes dataset used for this project is based off data scraped from 
 
 ### Requirements-Packages
 
-I have highlighted the more important packages in the requirements.txt file. Notably, you will have to use python 3.6 if you want to run spacey.
+I have highlighted the more important packages in the requirements.txt file. Notably, you will have to use python 3.6 if you want to run spacey. You will also need to download the ner packages, which can be referenced [here](https://allenai.github.io/scispacy/)
 
 ---
 
