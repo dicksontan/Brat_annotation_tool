@@ -54,7 +54,9 @@ docker ps
 Create a folder called brat_annotations and touch a.txt in the folder. Assuming your container id is c5a09d229264, run the following to transfer files in:
 
 ```
-docker cp ./desktop/brat_annotations c5a09d229264:bratdata/examples ```
+docker cp ./desktop/brat_annotations c5a09d229264:bratdata/examples 
+
+```
 
 
 ---
