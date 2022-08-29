@@ -67,18 +67,20 @@ cd examples
 ls
 ```
 
-Confirm that you are able to see mt_samples folder in examples folder. At this point in time, you should be able to open the UI of brat through docker and view the examples folder to see if mt_samples folder resides in it. Note that in the viewer, it may state that you do not have permissions in a certain file etc. If thats the case, cd to that file's directory and enter the following:
+Confirm that you are able to see mt_samples folder in examples folder. At this point in time, you should be able to open the browser UI of brat through docker and view the examples folder to see if mt_samples folder resides in it. Note that in the viewer, it may state that you do not have permissions in a certain file etc. If thats the case, cd to that file's directory and enter the following:
 
 ```
 chmod +wrx [filename]
 ```
-Next, download the brat_shell.sh file and put it in your desktop. Create a brat_annotations folder on your desktop.
+Next, download the brat_shell.sh file from this repo and put it in your desktop. Create a brat_annotations folder on your desktop.
 
 Then, everytime you want to run the script, enter this into terminal:
 
 ```
 ./desktop/brat_shell.sh
 ```
+
+Go back into your browser UI and view the annotations.
 
 ---
 
