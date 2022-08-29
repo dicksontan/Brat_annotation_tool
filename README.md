@@ -72,7 +72,15 @@ Confirm that you are able to see mt_samples folder in examples folder. At this p
 ```
 chmod +wrx [filename]
 ```
-Next, download the brat_shell.sh file from this repo and put it in your desktop. Create a brat_annotations folder on your desktop.
+Next, download the brat_shell.sh file from this repo and put it in your desktop. 
+
+Create a brat_annotations folder on your desktop.
+
+Download the python files brat_run.py and brat_clean.py
+
+In brat_run.py, enter the required inputs 1-4 under if __name__ == "__main__".
+
+Also, change the python file path in brat_shell.sh if required.
 
 Then, everytime you want to run the script, enter this into terminal:
 
@@ -84,13 +92,6 @@ Go back into your browser UI and view the annotations.
 
 ---
 
-### Conclusion and Recommendations
+### Brat_model notebook
 
----
-
-### Sources
-    
-
-1. https://www.cityofames.org/government/departments-divisions-i-z/public-works/alley-maintenance
-
-   Summary: Government website summarising alley length where we infer that many houses probably will not have alleys.
+Data cleaning and visualizations in notebook format is provided in Brat_model.ipynb
