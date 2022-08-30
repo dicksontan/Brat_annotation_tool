@@ -74,7 +74,7 @@ class get_ents:
 
         f = open(folder_path + '/annotation.conf','w')
 
-        text = '[entities]\n' + '\n'.join(unique_labels)
+        text = '[entities]\n\n' + '\n'.join(unique_labels) +'\n\n[relations]\n\n[events]\n\n[attributes]'
 
         f.write(text)
 
