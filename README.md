@@ -46,7 +46,7 @@ docker run --platform linux/amd64 -it --privileged --pid=host --name=brat1 -d -p
 ```
 ### Testing file transfer and creating input folder
 
-To get image id:
+To get container id:
 
 ```
 docker ps
