@@ -111,3 +111,9 @@ For transferring files out from brat container, create a folder called brat_extr
 docker cp c5a09d229264:bratdata/mt_samples/brat_annotations ./desktop/brat_extracted
 ```
 
+For extracting only annotated files, create a folder called annotated inside brat_extracted. Note down the index which you want to extract (e.g. 0043,0173). Then enter into terminal:
+
+```
+list=(0043 0173)
+for val in $list; do cp -v ./desktop/brat_extracted/brat_annotations/$val* ./desktop/brat_extracted/annotated;done
+```
