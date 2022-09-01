@@ -102,7 +102,7 @@ Data cleaning and visualizations in notebook format is provided in Brat_model.ip
 
 ### Other Useful Shell Commands
 
-For Transferring files out, create a folder called brat_extracted on your desktop and enter into terminal:
+For transferring files out from brat container, create a folder called brat_extracted on your desktop and enter into terminal:
 
 ```
 docker cp c5a09d229264:bratdata/mt_samples/brat_annotations ./desktop/brat_extracted
