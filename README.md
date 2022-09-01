@@ -63,11 +63,10 @@ Open a new terminal and access container bash through:
 ```
 docker exec -it brat1 /bin/bash
 cd bratdata
-cd examples
 ls
 ```
 
-Confirm that you are able to see mt_samples folder in examples folder. At this point in time, you should be able to open the browser UI of brat through docker and view the examples folder to see if mt_samples folder resides in it. Note that in the viewer, it may state that you do not have permissions in a certain file etc. If thats the case, cd to that file's directory and enter the following:
+Confirm that you are able to see mt_samples folder. At this point in time, you should be able to open the browser UI of brat through docker to see if mt_samples folder resides in it. Note that in the viewer, it may state that you do not have permissions in a certain file etc. If thats the case, cd to that file's directory and enter the following:
 
 ```
 chmod +wrx [filename]
