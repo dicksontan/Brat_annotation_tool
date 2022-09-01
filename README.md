@@ -4,7 +4,9 @@
 - [Requirements/Packages](#Requirements-Packages)
 - [Docker Set-up](#Docker-Set-up)
 - [Testing file transfer and creating input folder](#Testing-file-transfer-and-creating-input-folder)
+- [Creating Labels DataFrame for evauation](#Creating-Labels-DataFrame-for-evauation)
 - [Brat_model notebook](#Brat_model-notebook)
+- [Other Useful Shell Commands](#Other-Useful-Shell-Commands)
 
 ---
 
@@ -55,7 +57,7 @@ docker ps
 Create a folder called mt_samples on your desktop. Assuming your container id is c5a09d229264, run the following to transfer the folder in:
 
 ```
-docker cp ./desktop/mt_samples c5a09d229264:bratdata/examples
+docker cp ./desktop/mt_samples c5a09d229264:bratdata
 ```
 
 Open a new terminal and access container bash through:
@@ -63,14 +65,16 @@ Open a new terminal and access container bash through:
 ```
 docker exec -it brat1 /bin/bash
 cd bratdata
-cd examples
 ls
 ```
 
-Confirm that you are able to see mt_samples folder in examples folder. At this point in time, you should be able to open the browser UI of brat through docker and view the examples folder to see if mt_samples folder resides in it. Note that in the viewer, it may state that you do not have permissions in a certain file etc. If thats the case, cd to that file's directory and enter the following:
+Confirm that you are able to see mt_samples folder. At this point in time, you should be able to open the browser UI of brat through docker to see if mt_samples folder resides in it. Note that in the viewer, it may state that you do not have permissions in a certain file etc. If thats the case, cd to that file's directory and enter the following:
 
 ```
 chmod +wrx [filename]
+
+e.g. chmod +wrx brat-v1.3_crunchy_Frog.tar.gz
+
 ```
 Next, download the brat_shell.sh file from this repo and put it in your desktop. 
 
@@ -94,6 +98,34 @@ In the brat braowser UI, login with user: brat, pass: brat, to make changes to a
 
 ---
 
+### Creating Labels DataFrame for evauation
+
+After you have manually reviewed and corrected data inside brat, you may want to extract labelling info for model evaluation. We have created a python file to create csv files with labelling info after you have extracted the new annotated files from the brat container. This python file will create 2 csvs, 1 csv with labelling info from your labelling, and another csv with labelling info from spacy. You first have to create a extract_labels_csv folder in the brat_extracted folder. Then, run the extract_labels_to_csv python file e.g. :
+
+
+```
+python /Users/user_1/Desktop/Vs_Code_Projects/Brat/extract_labels_to_csv.py
+```
+
+---
+
 ### Brat_model notebook
 
 Data cleaning and visualizations in notebook format is provided in Brat_model.ipynb
+
+---
+
+### Other Useful Shell Commands
+
+For transferring files out from brat container, create a folder called brat_extracted on your desktop and enter into terminal:
+
+```
+docker cp c5a09d229264:bratdata/mt_samples/brat_annotations ./desktop/brat_extracted
+```
+
+For extracting only annotated files, create a folder called annotated inside brat_extracted. Note down the index which you want to extract (e.g. 0043,0173). Then enter into terminal:
+
+```
+list=(0043 0173)
+for val in $list; do cp -v ./desktop/brat_extracted/brat_annotations/$val* ./desktop/brat_extracted/annotated;done
+```
