@@ -5,6 +5,7 @@
 - [Docker Set-up](#Docker-Set-up)
 - [Testing file transfer and creating input folder](#Testing-file-transfer-and-creating-input-folder)
 - [Brat_model notebook](#Brat_model-notebook)
+- [Other Useful Shell Commands](#Other-Useful-Shell-Commands)
 
 ---
 
@@ -96,3 +97,14 @@ In the brat braowser UI, login with user: brat, pass: brat, to make changes to a
 ### Brat_model notebook
 
 Data cleaning and visualizations in notebook format is provided in Brat_model.ipynb
+
+---
+
+### Other Useful Shell Commands
+
+For Transferring files out, create a folder called brat_extracted on your desktop and enter into terminal:
+
+```
+docker cp c5a09d229264:bratdata/mt_samples/brat_annotations ./desktop/brat_extracted
+```
+
