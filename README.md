@@ -71,6 +71,9 @@ Confirm that you are able to see mt_samples folder. At this point in time, you s
 
 ```
 chmod +wrx [filename]
+
+e.g. chmod +wrx brat-v1.3_crunchy_Frog.tar.gz
+
 ```
 Next, download the brat_shell.sh file from this repo and put it in your desktop. 
 
