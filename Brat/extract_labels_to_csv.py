@@ -47,33 +47,33 @@ def generate_annotation_csv(annotated_index,folder_path):
 
 if __name__ == '__main__':
 
-    # input1: amend this index according to the files which have been annotated
+    # input1: Input the indexes of the ann which you want to do model evaluation
     # e.g. 40 43 110 149 173 226 257 319
 
     annotated_index = input('Please enter index of files which have been man labelled: ').split()
 
-    # input2: folder_path_man is the path where the extracted brat files that have been man labelled are from
+    # input2: Input the path of the extracted brat files that have been reviewed/man labelled
     # e.g. ./Desktop/brat_extracted/brat_annotations
 
     folder_path_man = input('Please enter path where the extracted man labelled brat files are in: ')
 
-    # input3: folder_path_2 is the path where the extracted brat files that have been labelled by spacy are from
+    # input3: Input the path of the brat files that have been labelled by spacy
     # e.g. ./Desktop/brat_annotations
 
     folder_path_spacy = input('Please enter path where the spacy labelled brat files are in: ')
 
-    # input4: enter folder path where we want to store file
+    # input4: enter folder path where we want to store the csv files
     # e.g. ./Desktop/brat_extracted/extract_labels_csv
 
-    csv_folder_path = input('Please enter folder path where we want to store file: ')
+    csv_folder_path = input('Please enter folder path to store the csv files: ')
 
-    # generating df for labels data for manual annotation files
+    # generating labelling info df for reviewed/man labelled annotations
 
     man_labelled_df = generate_annotation_csv(annotated_index,folder_path_man)
 
     man_labelled_df.to_csv(csv_folder_path+'/man_labelled_df.csv', header = True, index=False)
 
-    # generating df for labels data for spacy annotation files
+    # generating labelling info df for spacy annotations
 
     spacy_labelled_df = generate_annotation_csv(annotated_index,folder_path_spacy)
 

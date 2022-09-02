@@ -61,7 +61,7 @@ class cleaner:
 
         # concat_df5['med_str'] = concat_df4['med_str'].str.replace(r'(\b[a-zA-Z]\b)','')
 
-        # #lemmatize sentences
+        # #lemmatize and clean stop words
 
         # concat_df6 = concat_df5.copy()
 

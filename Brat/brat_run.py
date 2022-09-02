@@ -27,6 +27,9 @@ class get_ents:
             brat_index = [int(i) for i in brat_index]
 
         if brat_index is None:
+            
+            # Using the entered start and end index, we get the actual indexes in relation to the dataframe
+
             brat_index = list(self.cleaned_df[start_index: end_index].index)
 
         for i in brat_index:
@@ -68,11 +71,13 @@ class get_ents:
             file_name = file_name.replace(' ','_')
             file_name = file_name.replace("/",'_')
 
+            # save annotation file for that clinical note
+
             self.save_annot_files(folder_path,doc,file_name)
 
         self.save_config_files(folder_path,ent_labels)
 
-        print(f'no labels for: {self.no_labels}')
+        print(f'no labels for indexes: {self.no_labels}')
 
     def save_annot_files(self,folder_path,doc,file_name):
 
@@ -110,8 +115,12 @@ if __name__ == "__main__":
     dataset_path = input('Please enter path to your dataset:')
 
     # Input 2: Enter specific indexes of the dataset in which you want to run spacy tagging on.
-    # e.g. 40, 70, 173
-    # If you want a range, enter range
+    # e.g. 40 70 173
+
+    # If you want a range, enter range. Note that for range, the range that you enter works like an iloc,
+    # where if you enter 10, it will select the 10th clinical note, regardless of its dataframe index. 
+    # For example, the 10th clinical note could have index 11
+
     # If you want to loop though every index in the dataset, then just enter all
 
     index_input = input('Please enter specific indexes: ')
@@ -121,13 +130,13 @@ if __name__ == "__main__":
         start_index = None
         end_index = None
 
-    # optional input if we want range
+    # if we chose to enter range
 
     if index_input == 'range':
 
         brat_index = None
 
-        # Input 3a: index range which you want to start filter
+        # Input 3a: index range which you want to start filter. Note the numbers entered acts like an iloc not loc
         # e.g. start = 6
 
         input_start_index = input('Please enter start range index which you want to start loop in dataset: ')
@@ -147,7 +156,6 @@ if __name__ == "__main__":
 
     # Input 4: enter output path to save files to
     # e.g. /Users/user_1/Desktop/brat_annotations
-    # e.g. /Users/user_1/Desktop/a
 
     folder_path = input('Please enter output path for output files:')
 
