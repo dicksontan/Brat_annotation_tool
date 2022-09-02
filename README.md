@@ -110,8 +110,8 @@ python /Users/user_1/Desktop/Vs_Code_Projects/Brat/extract_labels_to_csv.py
 
 |tag_index|class|start|end|entity|index|
 |---|---|---|---|---|---|
-|**T1**|*ORGAN*|871|878|abdomen|110|
-|**T2**|*SIMPLE CHEMICAL*|900|910|loratadine|110|
+|T1|ORGAN|871|878|abdomen|110|
+|T2|SIMPLE CHEMICAL|900|910|loratadine|110|
 
 ---
 
