@@ -30,7 +30,7 @@ I have highlighted the more important packages in the requirements.txt file. Not
 
 ---
 
-### Docker Set-up
+### Docker Set-Up
 
 Reference: [cassj/brat](https://user-images.githubusercontent.com/50508538/187128975-c774562f-21dc-44dc-b7a8-92c11956e7f3.png)
 
@@ -80,9 +80,9 @@ Next, download the brat_shell.sh file from this repo and put it in your desktop.
 
 Create a brat_annotations folder on your desktop.
 
-Download the python files brat_run.py and brat_clean.py
+Download the python files brat_run.py, brat_clean.py, extract_labels_to_csv.py
 
-In brat_run.py, change the required inputs 1-4 according to your local context under: if __name__ == "__main__".
+In brat_run.py and extract_labels_to_csv.py, under: if __name__ == "__main__", make sure you read the required inputs. When you run the shell commands, the terminal will prompt you for inputs to be fed into the python script.
 
 Also, change the python file path in brat_shell.sh if required.
 
@@ -94,18 +94,24 @@ Then, everytime you want to run the script, enter this into terminal (make sure 
 
 Go back into your browser UI and view the annotations.
 
-In the brat braowser UI, login with user: brat, pass: brat, to make changes to annotations.
+In the brat browser UI, login with user: brat, pass: brat, to make changes to annotations.
 
 ---
 
-### Creating Labels DataFrame for evauation
+### Creating Labels DataFrame for model evauation
 
-After you have manually reviewed and corrected data inside brat, you may want to extract labelling info for model evaluation. We have created a python file to create csv files with labelling info after you have extracted the new annotated files from the brat container. This python file will create 2 csvs, 1 csv with labelling info from your labelling, and another csv with labelling info from spacy. You first have to create a extract_labels_csv folder in the brat_extracted folder. Then, run the extract_labels_to_csv python file e.g. :
+After you have manually reviewed and corrected data inside brat, you may want to extract labelling info for model evaluation e.g. creation of confusion matrix. We have created a python file to create csv files with labelling info after you have extracted the new annotated files from the brat container. This python file will create 2 csvs, 1 csv with labelling info from your labelling, and another csv with labelling info from spacy. You first have to create a extract_labels_csv folder in the brat_extracted folder. Then, run the extract_labels_to_csv.py file e.g. :
+
 
 
 ```
 python /Users/user_1/Desktop/Vs_Code_Projects/Brat/extract_labels_to_csv.py
 ```
+
+|tag_index|class|start|end|entity|index|
+|---|---|---|---|---|---|
+|**T1**|*ORGAN*|871|878|abdomen|110|
+|**T2**|*SIMPLE CHEMICAL*|900|910|loratadine|110|
 
 ---
 
@@ -123,7 +129,7 @@ For transferring files out from brat container, create a folder called brat_extr
 docker cp c5a09d229264:bratdata/mt_samples/brat_annotations ./desktop/brat_extracted
 ```
 
-For extracting only annotated files, create a folder called annotated inside brat_extracted. Note down the index which you want to extract (e.g. 0043,0173). Then enter into terminal:
+For extracting selected files (e.g. only those that you reviewed/did manual labelling), create a folder called "annotated" inside brat_extracted. Note down the index which you want to extract (e.g. 0043,0173). Then enter into terminal:
 
 ```
 list=(0043 0173)
