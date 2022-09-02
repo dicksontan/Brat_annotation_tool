@@ -71,7 +71,7 @@ class cleaner:
 
         self.cleaned_df = concat_df3
 
-        # if you want want to do data cleaning, then set self.cleaned_df = concat_df6 and uncomment everyt
+        # if you want want to do data cleaning, then set self.cleaned_df = concat_df6 and uncomment cleaning lines above
 
 class stop_words:
 

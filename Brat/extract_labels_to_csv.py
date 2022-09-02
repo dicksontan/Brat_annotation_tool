@@ -48,25 +48,34 @@ def generate_annotation_csv(annotated_index,folder_path):
 if __name__ == '__main__':
 
     # input1: amend this index according to the files which have been annotated
+    # e.g. 40 43 110 149 173 226 257 319
 
-    annotated_index = [40,43,110,149,173,226,257,319]
+    annotated_index = input('Please enter index of files which have been man labelled: ').split()
 
-    # input2: folder_path_1 is the path where the extracted brat files that have been man labelled are from
+    # input2: folder_path_man is the path where the extracted brat files that have been man labelled are from
+    # e.g. ./Desktop/brat_extracted/brat_annotations
 
-    folder_path_man = './Desktop/brat_extracted/brat_annotations'
+    folder_path_man = input('Please enter path where the extracted man labelled brat files are in: ')
 
     # input3: folder_path_2 is the path where the extracted brat files that have been labelled by spacy are from
+    # e.g. ./Desktop/brat_annotations
 
-    folder_path_spacy = './Desktop/brat_annotations'
+    folder_path_spacy = input('Please enter path where the spacy labelled brat files are in: ')
+
+    # input4: enter folder path where we want to store file
+    # e.g. ./Desktop/brat_extracted/extract_labels_csv
+
+    csv_folder_path = input('Please enter folder path where we want to store file: ')
 
     # generating df for labels data for manual annotation files
 
     man_labelled_df = generate_annotation_csv(annotated_index,folder_path_man)
 
-    man_labelled_df.to_csv('./Desktop/brat_extracted/extract_labels_csv/man_labelled_df.csv', header = True, index=False)
+    man_labelled_df.to_csv(csv_folder_path+'/man_labelled_df.csv', header = True, index=False)
 
     # generating df for labels data for spacy annotation files
 
     spacy_labelled_df = generate_annotation_csv(annotated_index,folder_path_spacy)
 
-    spacy_labelled_df.to_csv('./Desktop/brat_extracted/extract_labels_csv/spacy_labelled_df.csv', header = True, index=False)
+    spacy_labelled_df.to_csv(csv_folder_path+'/spacy_labelled_df.csv', header = True, index=False)
+
