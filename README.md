@@ -30,7 +30,7 @@ I have highlighted the more important packages in the requirements.txt file. Not
 
 ---
 
-### Docker Set-up
+### Docker Set-Up
 
 Reference: [cassj/brat](https://user-images.githubusercontent.com/50508538/187128975-c774562f-21dc-44dc-b7a8-92c11956e7f3.png)
 
