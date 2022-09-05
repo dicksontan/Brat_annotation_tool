@@ -12,6 +12,6 @@ echo 'Transferring Entity Files to Linux VM containing volumes...'
 
 chmod -R u=rwx,g=rwx,o=rwx ./desktop/brat_annotations
 
-docker cp ./desktop/brat_annotations c5a09d229264:bratdata/examples/mt_samples
+docker cp ./desktop/brat_annotations c5a09d229264:bratdata/mt_samples
 
 echo 'Entity Files Transferred'
