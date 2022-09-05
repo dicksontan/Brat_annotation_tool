@@ -82,7 +82,7 @@ Create a brat_annotations folder on your desktop.
 
 Download the python files brat_run.py, brat_clean.py, extract_labels_to_csv.py
 
-In brat_run.py and extract_labels_to_csv.py, under: if __name__ == "__main__", make sure you read the required inputs. When you run the shell commands, the terminal will prompt you for inputs to be fed into the python script.
+In brat_run.py and extract_labels_to_csv.py, under: if __name__ == "__main__", make sure you read the required input instructions. When you run the shell commands, the terminal will prompt you for inputs to be fed into the python script.
 
 Also, change the python file path in brat_shell.sh if required.
 
