@@ -115,7 +115,7 @@ python /Users/user_1/Desktop/Vs_Code_Projects/Brat/extract_labels_to_csv.py
 
 ---
 
-### Brat_model notebook
+### Brat_scrapbook notebook
 
 Data cleaning and visualizations in notebook format is provided in Brat_model.ipynb
 
