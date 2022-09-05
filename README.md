@@ -100,7 +100,7 @@ In the brat browser UI, login with user: brat, pass: brat, to make changes to an
 
 ### Creating Labels DataFrame for model evauation
 
-After you have manually reviewed and corrected data inside brat, you may want to extract labelling info for model evaluation e.g. creation of confusion matrix. We have created a python file to create csv files with labelling info after you have extracted the new annotated files from the brat container. This python file will create 2 csvs, 1 csv with labelling info from your labelling, and another csv with labelling info from spacy. You first have to create a extract_labels_csv folder in the brat_extracted folder. Then, run the extract_labels_to_csv.py file e.g. :
+After you have manually reviewed and corrected data inside brat, you may want to extract labelling info for model evaluation e.g. creation of confusion matrix. We have created a python file to create csv files with labelling info after you have extracted the new annotated files from the brat container. This python file will create 2 csvs, 1 csv with labelling info from your labelling, and another csv with labelling info from spacy. You first have to create a extract_labels_csv folder in the brat_extracted folder. Then, read the input instructions in the file and run the extract_labels_to_csv.py file e.g. :
 
 
 
